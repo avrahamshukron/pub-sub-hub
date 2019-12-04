@@ -1,6 +1,6 @@
-from psh.hub import PubSubHub
-from psh.subscriber import Subscriber
-from psh.publisher import Publisher
+from hub import PubSubHub
+from subscriber import Subscriber
+from publisher import Publisher
 
 import asyncio
 
