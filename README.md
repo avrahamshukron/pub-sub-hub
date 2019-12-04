@@ -1,5 +1,10 @@
 # PubSubHub
 An example of using the Pub/Sub pattern with LVC through central hub using 0MQ
+It is written in Python3 using `asyncio`.
+
+The project is basically an experiment with `0MQ` and `asyncio`.
+
+Status: [![CircleCI](https://circleci.com/gh/avrahamshukron/pub-sub-hub/tree/master.svg?style=svg)](https://circleci.com/gh/avrahamshukron/pub-sub-hub/tree/master)
 
 ```text
 +-----------+    +-----------+   +-----------+
@@ -34,4 +39,13 @@ control this behavior as it is not appropriate to cache every message (E.g a
 temporal event which is only relevant to the time it was published) 
 
 ## See it in action
-To test 
+```shell script
+# In the repo top directory:
+python3 -m venv .psh-env
+. .psh-env/bin/activate
+pip install -r requirements.txt
+
+python3 psh/main.py
+```
+The `main.py` script creates the Hub, a subscriber and a publisher, and run
+them all together in the same process using dummy data.
